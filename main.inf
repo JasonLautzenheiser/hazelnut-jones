@@ -1,0 +1,23 @@
+Constant Story "Arise, Hazelnut Jones";
+Constant Headline "^An Interactive Adventure by Jason Lautzenheiser^";
+Include "Parser";
+Include "Verblib";
+
+Object TempleEntrance "Temple Entrance"
+    with description
+            "You and your crew are standing before the entrance to the temple.
+            The carved stone doorway stands tightly closed, with no apparent 
+            way to open it from this side, but you've found no other entrance.
+            The jungle encroaches in on the ruins.",
+        cant_go "The jungle is thick around you and you do not want to 
+                leave before you gain entrance to this temple.",
+    has light;
+
+
+[Initialise;
+    location = TempleEntrance;
+    "You've hacked your way through the jungle for days to find this lost 
+    temple located deep within the jungle. ";
+];
+
+Include "Grammar";
