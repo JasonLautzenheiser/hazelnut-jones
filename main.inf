@@ -3,6 +3,17 @@ Constant Headline "^An Interactive Adventure by Jason Lautzenheiser^";
 Include "Parser";
 Include "Verblib";
 
+!===============================================================================
+! The player character
+
+Object myselfobj "(self object)"
+  with 
+    short_name "yourself",
+    description "You, well you are Hazelnut Jones, a bright and intelligent archaelogist, 
+        yet because of your youth you to be a bit rash when working on a new site.",
+    capacity 100,
+  has concealed animate proper transparent;
+
 Object TempleEntrance "Temple Entrance"
     with description
             "You and your crew are standing before the entrance to the temple.
@@ -14,8 +25,11 @@ Object TempleEntrance "Temple Entrance"
     has light;
 
 
+
+
 [Initialise;
     location = TempleEntrance;
+    player = myselfobj;
     "You've hacked your way through the jungle for days to find this lost 
     temple located deep within the jungle. ";
 ];
